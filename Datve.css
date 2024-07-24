@@ -1,0 +1,168 @@
+/* Đặt màu nền và font chữ cho toàn bộ trang */
+body {
+  background: #222;
+  min-height: 100svh;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://images.unsplash.com/photo-1716690449483-598c9f7fe0d0?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTk5MTAyMzN8&ixlib=rb-4.0.3&q=85");
+  background-position: center;
+  background-size: cover;
+}
+
+/* Căn giữa tiêu đề chính và thêm padding */
+h1 {
+  text-align: center;
+  background-color: #f5deb3; /* Màu nền của tiêu đề */
+  color: white; /* Màu chữ của tiêu đề */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #f5deb3; /* Viền dưới tiêu đề */
+}
+
+/* Đặt kiểu dáng cho các liên kết */
+a {
+  text-decoration: none; /* Xóa gạch chân của liên kết */
+  color: #000000; /* Màu chữ của liên kết */
+  margin: 0 15px; /* Khoảng cách giữa các liên kết */
+  font-size: 18px; /* Kích thước chữ cho các liên kết */
+}
+
+a:hover {
+  text-decoration: underline; /* Gạch chân khi di chuột qua liên kết */
+  color: #27d324; /* Màu chữ khi di chuột qua liên kết */
+}
+
+/* Đặt kiểu dáng cho danh sách không có thứ tự */
+ul {
+  padding-left: 20px; /* Thụt vào bên trái */
+  margin: 20px auto; /* Căn giữa và thêm khoảng cách bên ngoài */
+  max-width: 600px; /* Đặt chiều rộng tối đa cho danh sách */
+}
+
+/* Đặt kiểu dáng cho các mục trong danh sách */
+li {
+  margin: 10px 0; /* Khoảng cách giữa các mục trong danh sách */
+  font-size: 18px; /* Kích thước chữ cho các mục */
+  line-height: 1.6; /* Khoảng cách giữa các dòng chữ */
+}
+
+/* Đặt kiểu dáng cho các liên kết rỗng (nếu có) */
+a[href=""]:not(:last-child) {
+  display: none; /* Ẩn các liên kết rỗng */
+}
+.standard header {
+  background: hsl(255 100 100 / 0.15);
+  border-block-end: 1px solid hsl(255 0 0 / 0.25);
+  inset-block-start: 0;
+  position: sticky;
+  z-index: 100;
+
+  p {
+    backdrop-filter: blur(2rem);
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+    padding: 1rem;
+    position: relative;
+    text-shadow: 0 0 0.25rem hsla(116, 87%, 43%, 0.25);
+    z-index: 10;
+  }
+}
+
+.upgraded header {
+  background: hsl(255 100 100 / 0.15);
+  border-block-end: 1px solid hsl(255 0 0 / 0.25);
+  inset-block-start: 0;
+  position: sticky;
+  z-index: 100;
+
+  &::before {
+    background: linear-gradient(to bottom, white, transparent);
+    content: "";
+    position: sticky;
+    block-size: 0.125rem;
+    inset-block-start: 0;
+    inset-inline: 0;
+    margin-block-end: -0.125rem;
+    display: block;
+    z-index: 1;
+  }
+
+  p {
+    backdrop-filter: blur(2rem) saturate(150%);
+
+    --offset: 50px;
+
+    margin: 0 0 calc(var(--offset) * -1);
+    mask-image: linear-gradient(
+      to bottom,
+      rgb(122, 210, 22) 0,
+      rgb(11, 224, 11) calc(100% - var(--offset)),
+      transparent calc(100% - var(--offset)),
+      transparent
+    );
+    padding: 1rem 1rem calc(1rem + var(--offset));
+
+    /* layout stuff */
+    font-weight: 700;
+    line-height: 1;
+    position: relative;
+    text-shadow: 0 0 0.25rem hsl(255 100 100 / 0.25);
+    z-index: 10;
+  }
+}
+
+/*
+ * Additional styles to make the demo look nice.
+ */
+:root {
+  font-family: system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  line-height: 1.45;
+}
+
+main {
+  margin: 2rem auto;
+
+  @media (min-width: calc(300px * 2 + 2rem)) {
+    display: flex;
+    gap: 2rem;
+    inline-size: calc(300px * 2 + 2rem);
+  }
+
+  section {
+    aspect-ratio: 1;
+    background: white;
+    border: 1px solid hsl(255 0 0 / 0.25);
+    border-radius: 0.25rem;
+    inline-size: 300px;
+    margin-block-end: 2rem;
+    margin-inline: auto;
+    overflow-y: scroll;
+    position: relative;
+
+    p {
+      padding-inline: 1rem;
+    }
+
+    figure {
+      margin: 2rem 0;
+
+      figcaption {
+        font-size: 0.75rem;
+        font-style: italic;
+        padding: 0.25rem 1rem;
+      }
+    }
+
+    img {
+      block-size: auto;
+      display: block;
+      inline-size: 100%;
+      object-fit: cover;
+    }
+  }
+}
