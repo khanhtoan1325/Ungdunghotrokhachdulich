@@ -1,0 +1,88 @@
+/* Định dạng chung cho toàn bộ trang */
+body {
+  background: #222;
+  min-height: 100svh;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://images.unsplash.com/photo-1716690449483-598c9f7fe0d0?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTk5MTAyMzN8&ixlib=rb-4.0.3&q=85");
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Định dạng cho tiêu đề chính */
+h1 {
+  text-align: center;
+  background-color: hsl(39, 74%, 85%);
+  color: #000000;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f5deb3;
+  width: 100%;
+}
+
+/* Định dạng cho các liên kết */
+a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+/* Định dạng cho danh sách liên kết */
+li {
+  list-style: none;
+  display: inline;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  width: 100%;
+}
+
+ul a {
+  display: block;
+  padding: 14px 20px;
+}
+
+/* Định dạng cho nội dung */
+.content {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 100%;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h2,
+.content h3,
+.content h4 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.content p {
+  margin: 10px 0;
+}
+
+.content .signature {
+  text-align: right;
+  margin-top: 40px;
+}

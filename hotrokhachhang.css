@@ -1,0 +1,78 @@
+/* Định dạng chung cho toàn bộ trang */
+body {
+  background: #222;
+  min-height: 100svh;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://images.unsplash.com/photo-1716690449483-598c9f7fe0d0?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTk5MTAyMzN8&ixlib=rb-4.0.3&q=85");
+  background-position: center;
+  background-size: cover;
+}
+
+/* Định dạng cho tiêu đề chính */
+h1 {
+  text-align: center;
+  background-color: hsl(39, 74%, 85%);
+  color: #131212;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f5deb3;
+}
+
+/* Định dạng cho các liên kết */
+a {
+  text-decoration: none;
+  color: #a5df12;
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #d2bdbd;
+}
+
+/* Định dạng cho danh sách có thứ tự */
+ol {
+  padding-left: 20px;
+  margin: 20px;
+}
+
+/* Định dạng cho các mục danh sách */
+li {
+  margin: 10px 0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Định dạng cho tiêu đề phụ */
+h3,
+h5 {
+  color: #ccffcc;
+}
+
+h5 {
+  margin-top: 20px;
+}
+
+/* Định dạng cho hình ảnh */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Định dạng cho đoạn văn */
+p {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  line-height: 1.6;
+}
